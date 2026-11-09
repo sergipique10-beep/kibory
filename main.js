@@ -32,10 +32,14 @@ if (iLetter) iLetter.textContent = 'ı';
 function fitHeroWord() {
     if (!heroTop || !word) return;
     const avail = heroTop.clientWidth * (innerWidth < 860 ? .92 : .86);
-    word.style.fontSize = '100px';
-    const w = wordInner.getBoundingClientRect().width;
-    const size = 100 * avail / w;
+    // ajuste iterativo: mide, corrige y vuelve a medir
+    let size = 100;
     word.style.fontSize = size + 'px';
+    for (let k = 0; k < 3; k++) {
+        const w = wordInner.offsetWidth || 1;
+        size = size * avail / w;
+        word.style.fontSize = size + 'px';
+    }
 
     // situar la línea base exactamente en el borde inferior del panel
     word.style.bottom = '0px';
@@ -772,6 +776,9 @@ addEventListener('scroll', () => {
 let rT;
 addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(layout, 80); });
 
+// la palabra se reajusta siempre que cambie el tamaño del panel
+if ('ResizeObserver' in window && heroTop) new ResizeObserver(() => fitHeroWord()).observe(heroTop);
+
 let started = false;
 const start = () => {
     if (started) return; started = true;
@@ -779,6 +786,7 @@ const start = () => {
     setActive(5, true);
     startCycle();
     requestAnimationFrame(() => document.documentElement.classList.add('ready'));
+    [300, 1200, 3000].forEach(t => setTimeout(fitHeroWord, t));
     parallaxLoop();
 };
 const fontsReady = document.fonts
