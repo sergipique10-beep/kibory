@@ -40,6 +40,12 @@ function fitHeroWord() {
         size = size * avail / w;
         word.style.fontSize = size + 'px';
     }
+    // tampoco puede ser más alta que el panel (pantallas bajas y anchas)
+    const mctx = document.createElement('canvas').getContext('2d');
+    mctx.font = `800 ${size}px "Bricolage Grotesque"`;
+    const asc = mctx.measureText('kbl').actualBoundingBoxAscent || size * .75;
+    const availH = heroTop.clientHeight - (innerWidth < 860 ? 110 : 140);
+    if (asc > availH) { size *= availH / asc; word.style.fontSize = size + 'px'; }
 
     // situar la línea base exactamente en el borde inferior del panel
     word.style.bottom = '0px';

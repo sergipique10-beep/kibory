@@ -789,3 +789,9 @@ html.js .reveal-up.in { opacity: 1; transform: none; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
     html { scroll-behavior: auto; }
 }
+
+/* pantallas bajas: el hero respira mejor sin la etiqueta */
+@media (min-width: 861px) and (max-height: 820px) {
+    .hero-copy .pill { display: none; }
+    .hero-copy h1 { margin-top: 0; }
+}
