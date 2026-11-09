@@ -115,6 +115,10 @@ body {
     position: relative;
     text-align: center;
     margin-top: 2rem;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .bg-logo-text {
     font-size: 15rem;
@@ -130,9 +134,9 @@ body {
     border-radius: 50%;
     object-fit: cover;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 .f-tag {
@@ -143,15 +147,16 @@ body {
     border-radius: 20px;
     font-size: 0.85rem;
 }
-.tag-1 { top: 10%; left: 25%; }
-.tag-2 { top: 15%; right: 25%; }
-.tag-3 { bottom: 20%; left: 22%; }
-.tag-4 { bottom: 15%; right: 22%; }
+.tag-1 { top: 12%; left: 22%; }
+.tag-2 { top: 12%; right: 22%; }
+.tag-3 { bottom: 22%; left: 20%; }
+.tag-4 { top: 45%; right: 16%; }
 
 .floating-badge {
     position: absolute;
-    right: 5%;
-    bottom: 0;
+    right: 2%;
+    bottom: 4%;
+    z-index: 2;
     background: white;
     color: var(--text-dark);
     padding: 12px 20px;
@@ -323,7 +328,7 @@ body { overflow-x: hidden; }
     .hero-section { padding-bottom: 3rem; }
     .hero-header-text h1 { font-size: 2.2rem; }
     .bg-logo-text { font-size: 6.5rem; letter-spacing: -4px; }
-    .hero-main-visual { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .hero-main-visual { height: auto; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
     .hero-dog-img { position: static; transform: none; width: 240px; height: 240px; margin-top: -3rem; }
     .floating-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; order: 3; }
     .f-tag { position: static; }
