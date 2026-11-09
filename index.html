@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kibory - Comida real para perros</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar">
+        <div class="nav-brand">kibory</div>
+        <div class="nav-info">
+            <span class="badge">Nuevo</span> Comida real cocinada a baja temperatura. 
+            <span class="sub-info">🚚 Envío en 24h · Sin permanencia</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#recetas">Recetas</a>
+            <a href="#ingredientes">Ingredientes</a>
+            <a href="#opiniones">Opiniones</a>
+            <a href="#empezar">Empezar</a>
+            <a href="#">TikTok</a>
+        </nav>
+        <button class="cart-btn">🛒 0</button>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-header-text">
+            <span class="tag-new">Nuevo · Menú cachorro</span>
+            <h1>Comida real para perros de verdad.</h1>
+            <p>70% carne fresca y cero conservantes. Raciones a medida, en la puerta.</p>
+            <div class="hero-cta">
+                <a href="#" class="btn-primary">Pide tu primer menú</a>
+                <a href="#recetas" class="btn-secondary">Ver recetas</a>
+            </div>
+        </div>
+
+        <div class="hero-main-visual">
+            <h1 class="bg-logo-text">kibory</h1>
+            <div class="floating-tags">
+                <span class="f-tag tag-1">¡Me la como todita!</span>
+                <span class="f-tag tag-2">Mi pelo brilla</span>
+                <span class="f-tag tag-3">Panguita feliz</span>
+                <span class="f-tag tag-4">Cero residuos</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="Perro Kibory" class="hero-dog-img">
+            <div class="floating-badge">
+                <div class="stars">★★★★★</div>
+                <p><strong>+12.000</strong> perros que ya comen Kibory</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SOBRE KIBORY (STATS) -->
+    <section class="stats-section">
+        <div class="stats-header">
+            <h2>Sobre Kibory</h2>
+            <p>En Kibory cocinamos como lo harías tú si tuvieras tiempo: <strong>carne fresca, verduras de verdad y cero atajos.</strong> Menús a medida para que tu perro viva más años, con más ganas.</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>66%</h3>
+                <p>de carne fresca en cada receta</p>
+            </div>
+            <div class="stat-card">
+                <h3>11.337+</h3>
+                <p>perros que ya comen Kibory</p>
+            </div>
+            <div class="stat-card">
+                <h3>4,6/5</h3>
+                <p>valoración media de las familias</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. NUESTRAS RECETAS -->
+    <section class="recipes-section" id="recetas">
+        <div class="section-title">
+            <h2>🐾 Nuestras recetas</h2>
+            <p>Cinco menús cocinados a baja temperatura y servidos en raciones a la medida de tu perro.</p>
+        </div>
+
+        <div class="recipes-grid">
+            <!-- Receta 1 (Destacada) -->
+            <div class="recipe-card main-card">
+                <span class="recipe-number">01.</span>
+                <h3>Pollo de corral</h3>
+                <div class="tags"><span class="tag-green">Más vendido</span> <span>Todas las edades</span></div>
+                <div class="recipe-price">desde <strong>1,90 €/día</strong></div>
+                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=400&q=80" alt="Pollo de corral">
+            </div>
+
+            <div class="recipes-subgrid">
+                <!-- Receta 2 -->
+                <div class="recipe-card">
+                    <span class="recipe-number">02.</span>
+                    <h3>Ternera y boniato</h3>
+                    <div class="tags"><span>Adulto</span> <span>Alta energía</span></div>
+                    <div class="recipe-price">desde <strong>2,10 €/día</strong></div>
+                </div>
+
+                <!-- Receta 3 -->
+                <div class="recipe-card">
+                    <span class="recipe-number">03.</span>
+                    <h3>Salmón y arroz</h3>
+                    <div class="tags"><span>Piel sensible</span> <span>Omega 3</span></div>
+                    <div class="recipe-price">desde <strong>2,30 €/día</strong></div>
+                </div>
+
+                <!-- Receta 4 -->
+                <div class="recipe-card">
+                    <span class="recipe-number">04.</span>
+                    <h3>Cordero y calabaza</h3>
+                    <div class="tags"><span>Sin cereales</span> <span>Digestión fácil</span></div>
+                    <div class="recipe-price">desde <strong>2,20 €/día</strong></div>
+                </div>
+
+                <!-- Receta 5 -->
+                <div class="recipe-card">
+                    <span class="recipe-number">05.</span>
+                    <h3>Pavo ligero</h3>
+                    <div class="tags"><span>Senior</span> <span>Control de peso</span></div>
+                    <div class="recipe-price">desde <strong>1,95 €/día</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INGREDIENTES -->
+    <section class="ingredients-section" id="ingredientes">
+        <h2 class="giant-bg-text">Ingredientes</h2>
+        <p class="subtitle">Nada que no puedas pronunciar. Todo lo que su cuerpo necesita.</p>
+
+        <div class="interactive-plate">
+            <div class="ing-column left">
+                <div class="ing-item">
+                    <span class="ing-category">Proteína</span>
+                    <h4>Pollo de corral</h4>
+                    <p>Proteína magra de granjas locales. Nunca harinas ni subproductos.</p>
+                </div>
+                <div class="ing-item">
+                    <span class="ing-category">Omega 3</span>
+                    <h4>Salmón</h4>
+                    <p>Omega 3 para un pelo brillante y articulaciones sanas.</p>
+                </div>
+                <div class="ing-item">
+                    <span class="ing-category">Fibra</span>
+                    <h4>Boniato</h4>
+                    <p>Fibra y energía de liberación lenta para digestión tranquila.</p>
+                </div>
+            </div>
+
+            <!-- Imagen del plato central -->
+            <div class="plate-container">
+                <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=500&q=80" alt="Bol de comida kibory" class="plate-img">
+            </div>
+
+            <div class="ing-column right">
+                <div class="ing-item">
+                    <span class="ing-category">Vitamina A</span>
+                    <h4>Zanahoria</h4>
+                    <p>Betacaroteno para la vista y defensas.</p>
+                </div>
+                <div class="ing-item">
+                    <span class="ing-category">Minerales</span>
+                    <h4>Guisantes</h4>
+                    <p>Proteína vegetal, fibra y minerales para cada etapa.</p>
+                </div>
+                <div class="ing-item">
+                    <span class="ing-category">Antiox</span>
+                    <h4>Arándanos</h4>
+                    <p>Antioxidantes naturales sin azúcares añadidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ASÍ LLEGAN A NUESTRA COCINA -->
+    <section class="kitchen-section">
+        <h2>Así llegan a nuestra cocina</h2>
+        <p class="section-sub">antes de pasar por el fuego</p>
+
+        <div class="kitchen-cards">
+            <div class="k-card">
+                <span class="k-num">01</span>
+                <h3>Carne y pescado</h3>
+                <p>Pollo, ternera, cordero y salmón</p>
+            </div>
+            <div class="k-card">
+                <span class="k-num">02</span>
+                <h3>Verduras</h3>
+                <p>Boniato, calabaza y zanahoria</p>
+            </div>
+            <div class="k-card">
+                <span class="k-num">03</span>
+                <h3>Aceite de salmón</h3>
+                <p>Omega 3 de pescado azul</p>
+            </div>
+            <div class="k-card">
+                <span class="k-num">04</span>
+                <h3>Frutas</h3>
+                <p>Arándanos y manzana</p>
+            </div>
+            <div class="k-card">
+                <span class="k-num">05</span>
+                <h3>Semillas y algas</h3>
+                <p>Linaza, copos de avena, espirulina y perejil</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BANNER COMIDA DE VERDAD -->
+    <section class="real-food-banner">
+        <div class="banner-img">
+            <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=700&q=80" alt="Perro comiendo">
+        </div>
+        <div class="banner-text">
+            <h2>Comida de verdad, todos los días</h2>
+            <p>Raciones a medida que llegan a casa listas para servir. Tu perro solo tiene que vaciar el cuenco; tú, disfrutar de verle con energía.</p>
+        </div>
+    </section>
+
+    <!-- 7. REVIEWS / TESTIMONIOS -->
+    <section class="reviews-section" id="opiniones">
+        <span class="reviews-tag">🐾 Familias Kibory</span>
+        <h2>Lo que dicen en casa (y en el cuenco).</h2>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <span class="breed-tag">Bodeguero, 6 años</span>
+                <div class="rev-img"><img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=300&q=80" alt="Perro 1"></div>
+                <h4>Por fin come con ganas</h4>
+                <div class="stars">★★★★★</div>
+                <p>"Toby era de los que dejaban medio plato. Con Kibory rebaña el cuenco y nos lo pide."</p>
+                <strong>Laura M. con Toby</strong>
+            </div>
+
+            <div class="review-card">
+                <span class="breed-tag">Golden, 3 años</span>
+                <div class="rev-img"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=300&q=80" alt="Perro 2"></div>
+                <h4>Adiós a los gases</h4>
+                <div class="stars">★★★★★</div>
+                <p>"En dos semanas notamos la diferencia en su digestión. ¡Y el pelo le brilla muchísimo más!"</p>
+                <strong>Javier P. con Nala</strong>
+            </div>
+
+            <div class="review-card">
+                <span class="breed-tag">Caniche, 8 años</span>
+                <div class="rev-img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80" alt="Perro 3"></div>
+                <h4>Comodísimo</h4>
+                <div class="stars">★★★★★</div>
+                <p>"Llega a casa cuando toca y viene en raciones. No tengo que pensar en nada."</p>
+                <strong>Irene S. con Coco</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. BANNER PROMO FINAL -->
+    <section class="promo-banner-final" id="empezar">
+        <div class="promo-content">
+            <span class="promo-tag">Primer pedido</span>
+            <h2>Su primer menú, a mitad de precio.</h2>
+            <p>Cuéntanos su edad, raza y peso; calculamos la ración exacta y te la llevamos a casa en 48 h. Sin permanencia.</p>
+            <button class="btn-primary-large">Calcular su ración →</button>
+        </div>
+    </section>
+
+</body>
+</html>
