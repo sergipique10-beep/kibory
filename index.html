@@ -3,270 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kibory - Comida real para perros</title>
+    <title>Kibory · Comida real para perros de verdad</title>
+    <meta name="description" content="Comida real cocinada a baja temperatura. 70 % carne fresca, cero conservantes y raciones a medida en tu puerta.">
+    <meta name="theme-color" content="#14824c">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-    <!-- NAV BAR -->
-    <header class="navbar">
-        <div class="nav-brand">kibory</div>
-        <div class="nav-info">
-            <span class="badge">Nuevo</span> Comida real cocinada a baja temperatura. 
-            <span class="sub-info">🚚 Envío en 24h · Sin permanencia</span>
-        </div>
-        <nav class="nav-links">
-            <a href="#recetas">Recetas</a>
-            <a href="#ingredientes">Ingredientes</a>
-            <a href="#opiniones">Opiniones</a>
-            <a href="#empezar">Empezar</a>
-            <a href="#">TikTok</a>
-        </nav>
-        <button class="cart-btn">🛒 0</button>
-    </header>
+<!-- Hueso que sigue al cursor -->
+<div class="bone-cursor" aria-hidden="true">
+    <svg class="bone-svg" viewBox="0 0 64 30"><use href="#bone"/></svg>
+    <span class="bone-label"></span>
+</div>
 
-    <!-- 1. HERO SECTION -->
-    <section class="hero-section">
-        <div class="hero-header-text">
-            <span class="tag-new">Nuevo · Menú cachorro</span>
-            <h1>Comida real para perros de verdad.</h1>
-            <p>70% carne fresca y cero conservantes. Raciones a medida, en la puerta.</p>
-            <div class="hero-cta">
-                <a href="#" class="btn-primary">Pide tu primer menú</a>
-                <a href="#recetas" class="btn-secondary">Ver recetas</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+        <symbol id="bone" viewBox="0 0 64 30">
+            <path d="M12 3.5a6.5 6.5 0 0 1 6.2 8.3h27.6A6.5 6.5 0 1 1 52 19.6a6.5 6.5 0 1 1-6.2 8.3H18.2A6.5 6.5 0 1 1 12 19.6a6.5 6.5 0 1 1 0-16.1Z" fill="#2fc274" stroke="#0e3b24" stroke-width="3" stroke-linejoin="round" transform="translate(0 -3) scale(1 1.12)"/>
+            <path d="M19 10.5h26" stroke="#8ff0b8" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>
+        </symbol>
+        <symbol id="paw" viewBox="0 0 24 24">
+            <ellipse cx="12" cy="16" rx="5.4" ry="4.6"/><ellipse cx="5" cy="10" rx="2.4" ry="3"/><ellipse cx="9.2" cy="5.6" rx="2.4" ry="3"/><ellipse cx="14.8" cy="5.6" rx="2.4" ry="3"/><ellipse cx="19" cy="10" rx="2.4" ry="3"/>
+        </symbol>
+        <symbol id="arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="arrow-dr" viewBox="0 0 24 24"><path d="M7 7l10 10M17 9v8H9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+</svg>
+
+<div class="page">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero" id="inicio">
+        <div class="hero-top">
+            <header class="nav">
+                <a class="logo" href="#inicio" aria-label="Kibory, inicio">
+                    <svg class="logo-paw"><use href="#paw"/></svg><span>kibory</span>
+                </a>
+                <nav class="nav-links" aria-label="Principal">
+                    <a href="#recetas">Recetas</a>
+                    <a href="#ingredientes">Ingredientes</a>
+                    <a href="#opiniones">Opiniones</a>
+                </nav>
+                <a class="btn btn-dark btn-sm" href="#empezar">Pide ya <span class="btn-ico"><svg><use href="#arrow"/></svg></span></a>
+            </header>
+            <p class="hero-note">Comida real, cocinada<br>a baja temperatura.</p>
+            <p class="hero-ship"><i class="dot"></i>Envío en 48 h · Sin permanencia</p>
+
+            <h2 class="hero-word" aria-label="kibory">
+                <span class="hw-inner"><span class="l">k</span><span class="l">i</span><span class="l">b</span><span class="l">o</span><span class="l">r</span><span class="l">y</span><span class="bl"></span></span>
+            </h2>
+            <span class="ball" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero-bottom">
+            <div class="hero-copy">
+                <span class="pill pill-ghost">Nuevo · Menú cachorro</span>
+                <h1>Comida real<br>para perros<br>de verdad.</h1>
+                <p>70 % carne fresca y cero conservantes.<br>Raciones a medida, en tu puerta.</p>
+                <div class="btn-row">
+                    <a class="btn btn-dark" href="#empezar">Pide su primer menú <span class="btn-ico"><svg><use href="#arrow"/></svg></span></a>
+                    <a class="btn btn-line" href="#recetas">Ver recetas</a>
+                </div>
+            </div>
+            <svg class="paw-deco p1" aria-hidden="true"><use href="#paw"/></svg>
+            <svg class="paw-deco p2" aria-hidden="true"><use href="#paw"/></svg>
+
+            <div class="social-proof">
+                <span class="avatars">
+                    <img src="img/av-1.webp" alt="" width="40" height="40">
+                    <img src="img/av-2.webp" alt="" width="40" height="40">
+                    <img src="img/av-3.webp" alt="" width="40" height="40">
+                </span>
+                <span><strong>+12.000</strong><small>perros ya comen Kibory</small></span>
+            </div>
+            <a class="spin-badge" href="#empezar" aria-label="Calcula su ración en 2 minutos">
+                <svg class="spin-text" viewBox="0 0 120 120" aria-hidden="true">
+                    <defs><path id="circ1" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+                    <text><textPath href="#circ1" textLength="272" lengthAdjust="spacing">EN 2 MINUTOS · CALCULA SU RACIÓN ·</textPath></text>
+                </svg>
+                <span class="spin-core"><svg><use href="#arrow-dr"/></svg></span>
+            </a>
+        </div>
+
+        <div class="hero-dog" data-parallax>
+            <img src="img/hero-dog.webp" alt="Pastor australiano feliz" width="667" height="714" fetchpriority="high">
+            <svg class="dog-tag-bone" aria-hidden="true"><use href="#bone"/></svg>
+        </div>
+
+        <span class="bubble b1">¡Me lo he comido todo!</span>
+        <span class="bubble b2">Mi pelo brilla</span>
+        <span class="bubble b3">Barriguita feliz</span>
+        <span class="bubble b4">¡Otra ración!</span>
+    </section>
+
+    <!-- todo lo que va por encima del hero al hacer scroll -->
+    <div class="stack">
+
+    <!-- ============ 2. SOBRE KIBORY ============ -->
+    <section class="panel about" id="sobre">
+        <div class="about-side">
+            <h2 class="about-title">Sobre Kibory<i class="ydot"></i></h2>
+            <div class="experts">
+                <span class="avatars sm initials" aria-hidden="true">
+                    <i style="--c:#f0bd5e">LM</i><i style="--c:#5fdc95">JR</i><i style="--c:#f2a37c">AC</i>
+                </span>
+                <span><strong>+15</strong><small>nutricionistas y veterinarios<br>detrás de cada receta</small></span>
+            </div>
+            <div class="about-dog reveal-up">
+                <img src="img/corgi.webp" alt="Corgi sonriendo" width="277" height="439" loading="lazy">
             </div>
         </div>
-
-        <div class="hero-main-visual">
-            <h1 class="bg-logo-text">kibory</h1>
-            <div class="floating-tags">
-                <span class="f-tag tag-1">¡Me la como todita!</span>
-                <span class="f-tag tag-2">Mi pelo brilla</span>
-                <span class="f-tag tag-3">Panguita feliz</span>
-                <span class="f-tag tag-4">Cero residuos</span>
-            </div>
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="Perro Kibory" class="hero-dog-img">
-            <div class="floating-badge">
-                <div class="stars">★★★★★</div>
-                <p><strong>+12.000</strong> perros que ya comen Kibory</p>
+        <div class="about-main">
+            <p class="scrub-text" data-scrub>
+                En Kibory cocinamos como lo harías tú si tuvieras tiempo: <em>carne fresca</em>, <em>verduras de verdad</em> y cero atajos. Menús a medida para que tu perro viva <em>más años, con más ganas.</em>
+            </p>
+            <div class="stats">
+                <div class="stat"><span class="num" data-count="70" data-suffix=" %">70 %</span><small>de carne fresca en cada receta</small></div>
+                <div class="stat"><span class="num" data-count="12000" data-suffix="+">12.000+</span><small>perros que ya comen Kibory</small></div>
+                <div class="stat"><span class="num" data-count="4.9" data-dec="1" data-suffix="/5">4,9/5</span><small>valoración media de las familias</small></div>
             </div>
         </div>
     </section>
 
-    <!-- 2. SOBRE KIBORY (STATS) -->
-    <section class="stats-section">
-        <div class="stats-header">
-            <h2>Sobre Kibory</h2>
-            <p>En Kibory cocinamos como lo harías tú si tuvieras tiempo: <strong>carne fresca, verduras de verdad y cero atajos.</strong> Menús a medida para que tu perro viva más años, con más ganas.</p>
-        </div>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3>66%</h3>
-                <p>de carne fresca en cada receta</p>
+    <!-- ============ 3. RECETAS ============ -->
+    <section class="panel recipes" id="recetas">
+        <div class="recipes-head">
+            <h2 class="h-xl"><svg class="h-paw"><use href="#paw"/></svg>Nuestras recetas</h2>
+            <img class="peek peek-recipes" src="img/peek-collie.webp" alt="" width="360" height="321" loading="lazy">
+            <div class="recipes-aside">
+                <p>Cinco menús cocinados a baja temperatura y servidos en raciones a la medida de tu perro.</p>
+                <a class="btn btn-outline-green" href="#recetas">Ver todas</a>
             </div>
-            <div class="stat-card">
-                <h3>11.337+</h3>
-                <p>perros que ya comen Kibory</p>
-            </div>
-            <div class="stat-card">
-                <h3>4,6/5</h3>
-                <p>valoración media de las familias</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. NUESTRAS RECETAS -->
-    <section class="recipes-section" id="recetas">
-        <div class="section-title">
-            <h2>🐾 Nuestras recetas</h2>
-            <p>Cinco menús cocinados a baja temperatura y servidos en raciones a la medida de tu perro.</p>
         </div>
 
-        <div class="recipes-grid">
-            <!-- Receta 1 (Destacada) -->
-            <div class="recipe-card main-card">
-                <span class="recipe-number">01.</span>
+        <div class="recipe-grid">
+            <article class="r-card r-main" data-cursor="Ver receta">
+                <div class="r-top"><span class="r-num">01.</span><span class="r-go"><svg><use href="#arrow-r"/></svg></span></div>
                 <h3>Pollo de corral</h3>
-                <div class="tags"><span class="tag-green">Más vendido</span> <span>Todas las edades</span></div>
-                <div class="recipe-price">desde <strong>1,90 €/día</strong></div>
-                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=400&q=80" alt="Pollo de corral">
-            </div>
+                <div class="tags"><span>Más vendido</span><span>Todas las edades</span></div>
+                <span class="hand-note">¡el favorito de la casa!<svg viewBox="0 0 60 50" aria-hidden="true"><path d="M52 6C40 10 22 18 14 40m0 0-6-10m6 10 10-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+                <div class="bag bag-xl" data-flavor="Pollo de corral" data-dog="img/bag-lab.webp"></div>
+                <span class="price">desde 1,90 €/día</span>
+            </article>
 
-            <div class="recipes-subgrid">
-                <!-- Receta 2 -->
-                <div class="recipe-card">
-                    <span class="recipe-number">02.</span>
-                    <h3>Ternera y boniato</h3>
-                    <div class="tags"><span>Adulto</span> <span>Alta energía</span></div>
-                    <div class="recipe-price">desde <strong>2,10 €/día</strong></div>
-                </div>
+            <article class="r-card" data-cursor="Ver receta">
+                <div class="r-top"><span class="r-num">02.</span><span class="r-go"><svg><use href="#arrow-r"/></svg></span></div>
+                <h3>Ternera y boniato</h3>
+                <div class="tags"><span>Adulto</span><span>Alta energía</span></div>
+                <div class="bag" data-flavor="Ternera y boniato" data-color="#f2a37c" data-dog="img/bag-golden.webp"></div>
+                <span class="price">desde 2,10 €/día</span>
+            </article>
 
-                <!-- Receta 3 -->
-                <div class="recipe-card">
-                    <span class="recipe-number">03.</span>
-                    <h3>Salmón y arroz</h3>
-                    <div class="tags"><span>Piel sensible</span> <span>Omega 3</span></div>
-                    <div class="recipe-price">desde <strong>2,30 €/día</strong></div>
-                </div>
+            <article class="r-card" data-cursor="Ver receta">
+                <div class="r-top"><span class="r-num">03.</span><span class="r-go"><svg><use href="#arrow-r"/></svg></span></div>
+                <h3>Salmón y arroz</h3>
+                <div class="tags"><span>Piel sensible</span><span>Omega 3</span></div>
+                <div class="bag" data-flavor="Salmón y arroz" data-color="#f6b1a7" data-dog="img/bag-beagle.webp"></div>
+                <span class="price">desde 2,30 €/día</span>
+            </article>
 
-                <!-- Receta 4 -->
-                <div class="recipe-card">
-                    <span class="recipe-number">04.</span>
-                    <h3>Cordero y calabaza</h3>
-                    <div class="tags"><span>Sin cereales</span> <span>Digestión fácil</span></div>
-                    <div class="recipe-price">desde <strong>2,20 €/día</strong></div>
-                </div>
+            <article class="r-card" data-cursor="Ver receta">
+                <div class="r-top"><span class="r-num">04.</span><span class="r-go r-go-y"><svg><use href="#arrow"/></svg></span></div>
+                <h3>Cordero y calabaza</h3>
+                <div class="tags"><span>Sin cereales</span><span>Digestión fácil</span></div>
+                <div class="bag" data-flavor="Cordero y calabaza" data-color="#f4c57a" data-dog="img/bag-russell.webp"></div>
+                <span class="price">desde 2,20 €/día</span>
+            </article>
 
-                <!-- Receta 5 -->
-                <div class="recipe-card">
-                    <span class="recipe-number">05.</span>
-                    <h3>Pavo ligero</h3>
-                    <div class="tags"><span>Senior</span> <span>Control de peso</span></div>
-                    <div class="recipe-price">desde <strong>1,95 €/día</strong></div>
-                </div>
-            </div>
+            <article class="r-card" data-cursor="Ver receta">
+                <div class="r-top"><span class="r-num">05.</span><span class="r-go"><svg><use href="#arrow-r"/></svg></span></div>
+                <h3>Pavo ligero</h3>
+                <div class="tags"><span>Senior</span><span>Control de peso</span></div>
+                <div class="bag" data-flavor="Pavo ligero" data-color="#a9d8f0" data-dog="img/bag-frenchie.webp"></div>
+                <span class="price">desde 1,95 €/día</span>
+            </article>
         </div>
     </section>
 
-    <!-- 4. INGREDIENTES -->
-    <section class="ingredients-section" id="ingredientes">
-        <h2 class="giant-bg-text">Ingredientes</h2>
-        <p class="subtitle">Nada que no puedas pronunciar. Todo lo que su cuerpo necesita.</p>
+    <!-- ============ 4. INGREDIENTES ============ -->
+    <section class="panel panel-pink ingredients" id="ingredientes">
+        <span class="chip"><svg><use href="#paw"/></svg>Lo que lleva cada cuenco</span>
+        <div class="giant-wrap">
+            <h2 class="giant fill-word" data-fill>ingredientes</h2>
+            <span class="float-label fl1">Pollo de corral</span>
+            <span class="float-label fl2">Boniato</span>
+            <span class="float-label fl3">Aceite de salmón</span>
+            <span class="float-label fl4">Arándanos</span>
+        </div>
+        <p class="lead-center">Nada que no puedas pronunciar. Todo lo que su<br>cuerpo necesita.</p>
 
-        <div class="interactive-plate">
-            <div class="ing-column left">
-                <div class="ing-item">
-                    <span class="ing-category">Proteína</span>
-                    <h4>Pollo de corral</h4>
-                    <p>Proteína magra de granjas locales. Nunca harinas ni subproductos.</p>
-                </div>
-                <div class="ing-item">
-                    <span class="ing-category">Omega 3</span>
-                    <h4>Salmón</h4>
-                    <p>Omega 3 para un pelo brillante y articulaciones sanas.</p>
-                </div>
-                <div class="ing-item">
-                    <span class="ing-category">Fibra</span>
-                    <h4>Boniato</h4>
-                    <p>Fibra y energía de liberación lenta para digestión tranquila.</p>
-                </div>
+        <div class="bowl-stage">
+            <svg class="leaders" aria-hidden="true"></svg>
+            <ul class="ing-list left">
+                <li class="ing" data-i="0"><span class="ing-cat">Proteína</span><h3>Pollo de corral <b>1</b></h3><p>Proteína magra de granjas locales. Nunca harinas ni subproductos.</p></li>
+                <li class="ing" data-i="1"><span class="ing-cat">Omega 3</span><h3>Salmón <b>2</b></h3><p>Omega 3 para un pelo que brilla y unas articulaciones que aguantan paseos largos.</p></li>
+                <li class="ing" data-i="2"><span class="ing-cat">Fibra</span><h3>Boniato <b>3</b></h3><p>Fibra y energía de liberación lenta para una digestión tranquila.</p></li>
+            </ul>
+            <div class="bowl">
+                <canvas class="bowl-canvas" width="900" height="900" aria-label="Cuenco de Kibory con sus ingredientes" role="img"></canvas>
+                <div class="bowl-marks"></div>
             </div>
-
-            <!-- Imagen del plato central -->
-            <div class="plate-container">
-                <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=500&q=80" alt="Bol de comida kibory" class="plate-img">
-            </div>
-
-            <div class="ing-column right">
-                <div class="ing-item">
-                    <span class="ing-category">Vitamina A</span>
-                    <h4>Zanahoria</h4>
-                    <p>Betacaroteno para la vista y defensas.</p>
-                </div>
-                <div class="ing-item">
-                    <span class="ing-category">Minerales</span>
-                    <h4>Guisantes</h4>
-                    <p>Proteína vegetal, fibra y minerales para cada etapa.</p>
-                </div>
-                <div class="ing-item">
-                    <span class="ing-category">Antiox</span>
-                    <h4>Arándanos</h4>
-                    <p>Antioxidantes naturales sin azúcares añadidos.</p>
-                </div>
-            </div>
+            <ul class="ing-list right">
+                <li class="ing" data-i="3"><span class="ing-cat">Vitamina A</span><h3><b>4</b> Zanahoria</h3><p>Betacaroteno para la vista y las defensas.</p></li>
+                <li class="ing" data-i="4"><span class="ing-cat">Minerales</span><h3><b>5</b> Guisantes</h3><p>Proteína vegetal, fibra y minerales para cada etapa.</p></li>
+                <li class="ing" data-i="5"><span class="ing-cat">Antiox.</span><h3><b>6</b> Arándanos</h3><p>Antioxidantes naturales, sin azúcares añadidos.</p></li>
+            </ul>
         </div>
     </section>
 
-    <!-- 5. ASÍ LLEGAN A NUESTRA COCINA -->
-    <section class="kitchen-section">
-        <h2>Así llegan a nuestra cocina</h2>
-        <p class="section-sub">antes de pasar por el fuego</p>
-
-        <div class="kitchen-cards">
-            <div class="k-card">
-                <span class="k-num">01</span>
-                <h3>Carne y pescado</h3>
-                <p>Pollo, ternera, cordero y salmón</p>
-            </div>
-            <div class="k-card">
-                <span class="k-num">02</span>
-                <h3>Verduras</h3>
-                <p>Boniato, calabaza y zanahoria</p>
-            </div>
-            <div class="k-card">
-                <span class="k-num">03</span>
-                <h3>Aceite de salmón</h3>
-                <p>Omega 3 de pescado azul</p>
-            </div>
-            <div class="k-card">
-                <span class="k-num">04</span>
-                <h3>Frutas</h3>
-                <p>Arándanos y manzana</p>
-            </div>
-            <div class="k-card">
-                <span class="k-num">05</span>
-                <h3>Semillas y algas</h3>
-                <p>Linaza, copos de avena, espirulina y perejil</p>
-            </div>
+    <!-- ============ 5. COCINA ============ -->
+    <section class="panel panel-pink kitchen">
+        <h2 class="h-lg center">Así llegan a nuestra cocina</h2>
+        <p class="hand center">antes de pasar por el fuego <svg viewBox="0 0 40 30" aria-hidden="true"><path d="M2 8c12-6 26-4 32 10m0 0 2-9m-2 9-9-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></p>
+        <div class="polaroids">
+            <figure class="pola" style="--r:-6deg;--tape:#f2c46a"><span class="pn">01</span><canvas data-food="meat" width="460" height="360"></canvas><figcaption><b>Carne y pescado</b><small>Pollo, ternera, cordero y salmón</small></figcaption></figure>
+            <figure class="pola" style="--r:3deg;--tape:#6fe0a0"><span class="pn">02</span><canvas data-food="veg" width="460" height="360"></canvas><figcaption><b>Verduras</b><small>Boniato, calabaza y zanahoria</small></figcaption></figure>
+            <figure class="pola" style="--r:-2deg;--tape:#e9d7df"><span class="pn">03</span><canvas data-food="oil" width="460" height="360"></canvas><figcaption><b>Aceite de salmón</b><small>Omega 3 de pescado azul</small></figcaption></figure>
+            <figure class="pola" style="--r:4deg;--tape:#f2c46a"><span class="pn">04</span><canvas data-food="fruit" width="460" height="360"></canvas><figcaption><b>Frutas</b><small>Arándanos y manzana</small></figcaption></figure>
+            <figure class="pola" style="--r:-3deg;--tape:#6fe0a0"><span class="pn">05</span><canvas data-food="seeds" width="460" height="360"></canvas><figcaption><b>Semillas y algas</b><small>Linaza, pipas de calabaza, algas y perejil</small></figcaption></figure>
         </div>
     </section>
 
-    <!-- 6. BANNER COMIDA DE VERDAD -->
-    <section class="real-food-banner">
-        <div class="banner-img">
-            <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=700&q=80" alt="Perro comiendo">
+    <!-- ============ 6. COMIDA DE VERDAD ============ -->
+    <section class="panel real-food">
+        <div class="rf-media">
+            <img class="rf-dog" src="img/banner-lab.webp" alt="Labrador chocolate mirando a cámara" width="644" height="1000" loading="lazy">
+            <div class="cup red"><canvas class="cup-kibble" width="520" height="260"></canvas><span class="cup-body"></span></div>
         </div>
-        <div class="banner-text">
-            <h2>Comida de verdad, todos los días</h2>
+        <div class="rf-text">
+            <h2 class="h-lg">Comida de verdad,<br>todos los días</h2>
             <p>Raciones a medida que llegan a casa listas para servir. Tu perro solo tiene que vaciar el cuenco; tú, disfrutar de verle con energía.</p>
         </div>
     </section>
 
-    <!-- 7. REVIEWS / TESTIMONIOS -->
-    <section class="reviews-section" id="opiniones">
-        <span class="reviews-tag">🐾 Familias Kibory</span>
-        <h2>Lo que dicen en casa (y en el cuenco).</h2>
-
-        <div class="reviews-grid">
-            <div class="review-card">
-                <span class="breed-tag">Bodeguero, 6 años</span>
-                <div class="rev-img"><img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=300&q=80" alt="Perro 1"></div>
-                <h4>Por fin come con ganas</h4>
-                <div class="stars">★★★★★</div>
-                <p>"Toby era de los que dejaban medio plato. Con Kibory rebaña el cuenco y nos lo pide."</p>
-                <strong>Laura M. con Toby</strong>
+    <!-- ============ 7. OPINIONES ============ -->
+    <section class="panel reviews" id="opiniones">
+        <span class="chip chip-plain"><svg><use href="#paw"/></svg>Familias Kibory</span>
+        <h2 class="h-lg center">Lo que dicen en casa<br>(y en el cuenco).</h2>
+        <div class="rv-box">
+            <img class="peek peek-top" src="img/peek-dachs.webp" alt="" width="320" height="214" loading="lazy">
+            <div class="rv-viewport" data-cursor="Arrastra">
+                <div class="rv-track">
+                    <article class="rv-card"><div class="rv-txt"><span class="breed">Bodeguero, 6 años</span><h3>Por fin come<br>con ganas</h3><p>“Toby era de los que dejaban medio plato. Con Kibory rebaña el cuenco y nos pide más.”</p><span class="stars">★★★★★</span><b>Laura M.</b><small>con Toby</small></div><img src="img/rv-1.webp" alt="Toby, bodeguero" width="400" height="520" loading="lazy" draggable="false"></article>
+                    <article class="rv-card"><div class="rv-txt"><span class="breed">Golden, 3 años</span><h3>Adiós a los gases</h3><p>“En dos semanas notamos la diferencia en su digestión. Y el pelo le brilla muchísimo más.”</p><span class="stars">★★★★★</span><b>Javier P.</b><small>con Nala</small></div><img src="img/rv-2.webp" alt="Nala, golden retriever" width="400" height="520" loading="lazy" draggable="false"></article>
+                    <article class="rv-card"><div class="rv-txt"><span class="breed">Caniche, 8 años</span><h3>Comodísimo</h3><p>“Llega a casa cuando toca y viene en raciones. No tengo que pensar en nada.”</p><span class="stars">★★★★★</span><b>Irene S.</b><small>con Coco</small></div><img src="img/rv-3.webp" alt="Coco, caniche" width="400" height="520" loading="lazy" draggable="false"></article>
+                    <article class="rv-card"><div class="rv-txt"><span class="breed">Mestizo, 5 años</span><h3>Mi veterinaria<br>lo aprueba</h3><p>“Le enseñé los ingredientes y le encantó la fórmula. Ahora se lo recomienda a otros.”</p><span class="stars">★★★★★</span><b>Marta G.</b><small>con Rufo</small></div><img src="img/rv-4.webp" alt="Rufo, mestizo" width="400" height="520" loading="lazy" draggable="false"></article>
+                    <article class="rv-card"><div class="rv-txt"><span class="breed">Pastor alemán, 11 años</span><h3>Senior y<br>con energía</h3><p>“Con 11 años vuelve a pedir paseos largos. Algo ha cambiado, y para bien.”</p><span class="stars">★★★★★</span><b>Andrés L.</b><small>con Kira</small></div><img src="img/rv-5.webp" alt="Kira, pastor alemán" width="400" height="520" loading="lazy" draggable="false"></article>
+                    <article class="rv-card"><div class="rv-txt"><span class="breed">Beagle, 5 meses</span><h3>Cachorro feliz</h3><p>“El menú cachorro le sienta genial. Crece fuerte y sin problemas de estómago.”</p><span class="stars">★★★★★</span><b>Sara R.</b><small>con Pipa</small></div><img src="img/rv-6.webp" alt="Pipa, beagle cachorro" width="400" height="520" loading="lazy" draggable="false"></article>
+                </div>
             </div>
-
-            <div class="review-card">
-                <span class="breed-tag">Golden, 3 años</span>
-                <div class="rev-img"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=300&q=80" alt="Perro 2"></div>
-                <h4>Adiós a los gases</h4>
-                <div class="stars">★★★★★</div>
-                <p>"En dos semanas notamos la diferencia en su digestión. ¡Y el pelo le brilla muchísimo más!"</p>
-                <strong>Javier P. con Nala</strong>
+            <div class="rv-nav">
+                <button class="rv-btn prev" aria-label="Anterior"><svg><use href="#arrow-r"/></svg></button>
+                <div class="rv-dots" role="tablist" aria-label="Opiniones"></div>
+                <button class="rv-btn next" aria-label="Siguiente"><svg><use href="#arrow-r"/></svg></button>
             </div>
-
-            <div class="review-card">
-                <span class="breed-tag">Caniche, 8 años</span>
-                <div class="rev-img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80" alt="Perro 3"></div>
-                <h4>Comodísimo</h4>
-                <div class="stars">★★★★★</div>
-                <p>"Llega a casa cuando toca y viene en raciones. No tengo que pensar en nada."</p>
-                <strong>Irene S. con Coco</strong>
-            </div>
+            <img class="peek peek-bottom" src="img/peek-golden.webp" alt="" width="320" height="305" loading="lazy">
+            <span class="nam" aria-hidden="true">¡ñam!</span>
         </div>
     </section>
 
-    <!-- 8. BANNER PROMO FINAL -->
-    <section class="promo-banner-final" id="empezar">
-        <div class="promo-content">
-            <span class="promo-tag">Primer pedido</span>
-            <h2>Su primer menú, a mitad de precio.</h2>
-            <p>Cuéntanos su edad, raza y peso; calculamos la ración exacta y te la llevamos a casa en 48 h. Sin permanencia.</p>
-            <button class="btn-primary-large">Calcular su ración →</button>
+    <!-- ============ 8. CADA BOCADO ============ -->
+    <section class="panel bite">
+        <div class="bite-text">
+            <h2 class="h-lg">Cada bocado,<br><span>una fiesta</span></h2>
+            <p>Recetas con carne fresca y verduras de temporada que se comen con ganas desde el primer día.</p>
+        </div>
+        <div class="bite-art" data-cursor="Arrastra">
+            <div class="blob blob-a kib-bg"></div>
+            <div class="blob blob-b kib-bg"></div>
+            <div class="blob blob-c"><img src="img/bite-collie.webp" alt="Border collie con la lengua fuera" width="500" height="500" loading="lazy"></div>
+            <div class="blob blob-d kib-bg"></div>
         </div>
     </section>
 
+    <!-- ============ 9. PROMO ============ -->
+    <section class="panel promo" id="empezar">
+        <div class="promo-text">
+            <span class="pill pill-ghost">Primer pedido</span>
+            <h2 class="h-xl">Su primer menú,<br>a mitad de precio.</h2>
+            <p>Cuéntanos su raza, edad y peso: calculamos la ración exacta y te la llevamos a casa en 48 h. Sin permanencia, pausa cuando quieras.</p>
+            <span class="hand hand-white">¡sin letra pequeña!</span>
+            <div class="btn-row">
+                <a class="btn btn-dark" href="#empezar">Calcular su ración <span class="btn-ico"><svg><use href="#arrow"/></svg></span></a>
+                <a class="btn btn-line" href="#recetas">Ver recetas</a>
+            </div>
+        </div>
+        <div class="promo-art">
+            <img class="promo-dog" src="img/promo-dog.webp" alt="Border collie sentado" width="314" height="431" loading="lazy">
+            <div class="bag bag-mouth" data-flavor="Pollo de corral" data-dog="img/bag-lab.webp"></div>
+            <div class="bag bag-big" data-flavor="Pollo de corral" data-dog="img/bag-lab.webp"></div>
+            <div class="cup"><canvas class="cup-kibble" width="520" height="260"></canvas><span class="cup-body"></span></div>
+            <span class="spin-badge yellow" aria-hidden="true">
+                <svg class="spin-text" viewBox="0 0 120 120">
+                    <defs><path id="circ2" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+                    <text><textPath href="#circ2" textLength="272" lengthAdjust="spacing">PRIMER PEDIDO · −50 % · PRIMER PEDIDO · −50 % ·</textPath></text>
+                </svg>
+                <span class="spin-core dark"><svg viewBox="0 0 64 30"><use href="#bone"/></svg></span>
+            </span>
+        </div>
+    </section>
+
+    <!-- ============ 10. FOOTER ============ -->
+    <footer class="footer">
+        <div class="ft-row">
+            <p class="ft-claim">Comida real para<br>perros <span>de verdad.</span></p>
+            <nav class="ft-links" aria-label="Pie">
+                <a href="#recetas">Recetas</a><a href="#ingredientes">Ingredientes</a><a href="#opiniones">Opiniones</a><a href="#empezar">Empezar</a>
+            </nav>
+            <div class="ft-social">
+                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a>
+                <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5M14 4c.5 2.6 2.2 4.2 5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+                <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="4" fill="currentColor"/><path d="m10.5 9.5 4 2.5-4 2.5z" fill="#14824c"/></svg></a>
+            </div>
+        </div>
+        <div class="ft-stage">
+            <span class="ft-word" aria-hidden="true">kibory</span>
+            <div class="ft-dogs">
+                <img src="img/ft-1.webp" alt="" loading="lazy" style="--d:0">
+                <img src="img/ft-2.webp" alt="" loading="lazy" style="--d:1">
+                <img src="img/ft-3.webp" alt="" loading="lazy" style="--d:2">
+                <img src="img/ft-4.webp" alt="" loading="lazy" style="--d:3">
+                <img src="img/ft-5.webp" alt="" loading="lazy" style="--d:4">
+                <img src="img/ft-6.webp" alt="" loading="lazy" style="--d:5">
+                <img src="img/ft-7.webp" alt="" loading="lazy" style="--d:6">
+            </div>
+        </div>
+        <div class="ft-bar"><span>© 2026 Kibory</span><span><a href="#">Privacidad</a><a href="#">Cookies</a><a href="#">Aviso legal</a></span></div>
+    </footer>
+
+    </div><!-- /stack -->
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
